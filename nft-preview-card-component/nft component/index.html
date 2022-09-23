@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | NFT preview card component</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200&family=Tiro+Bangla:ital@1&display=swap"
+    rel="stylesheet">
+</head>
+<style>
+  .attribution { font-size: 12px; text-align: center; color: white; font-weight: 900;}
+.attribution a { color: hsl(228, 45%, 44%); }
+body{
+    background-color: hsl(217, 54%, 11%);
+}
+.card{
+    background-color: hsl(216, 50%, 16%);
+    height: 29em;
+    width: 17em;
+    border-radius: 12px;
+    margin: auto;
+    margin-top: 17vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px 10px rgb(26, 25, 25);
+}
+.image{
+    height: 14.5em;
+    width: 15em;
+    border-radius: 12px;
+    /* margin-bottom: 2em; */
+}
+img{
+    height: 14.5em;
+    width: 15em;
+    border-radius: 12px;
+}
+.text{
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    align-items: center;
+    margin: 0 1em;
+}
+.title{
+    font-size: 18px;
+    font-weight: 300, 400, 600;
+    color:hsl(0, 0%, 100%) ;
+    margin-bottom: 0;
+    
+}
+.sub-title{
+    color: hsl(215, 51%, 70%);
+}
+.sides{
+    font-family: 'Calibri', sans-serif;
+    /* margin-bottom: 3em; */
+    font-size: 14px;
+    display: grid;
+    grid-template-areas:
+        "leftside . . rightside";
+    column-gap: 3em;
+    font-weight: 900;
+    border-bottom: 0.1px solid hsl(214, 36%, 25%);
+}
+.leftside-title{
+    color: hsl(178, 100%, 50%);
+    grid-area: leftside;
+}
+.rightside-title{
+    color: hsl(215, 51%, 70%);
+    grid-area: rightside;
+}
+.creater{
+    height: 2em;
+    width: 14em;
+    margin-top: 0.5em;
+}
+.creater img{
+    height: 2em;
+    width: 2em;
+    float: left;
+}
+.user-text{
+    color: hsl(215, 51%, 70%);
+    float: right;
+    margin: 0.5em auto;
+}
+span{
+    color: white;
+}
+</style>
+
+<body>
+  <div class="card">
+    <div class="image">
+      <img src="/image-equilibrium.jpg" alt="">
+    </div>
+    <div class="text">
+      <h2 class="title">Equilibrium #3429</h2>
+      <p class="sub-title">Our Equilibrium collection promotes balance and calm.</p>
+    </div>
+    <div class="sides">
+      <p class="leftside-title">0.041ETH</p>
+      <p class="rightside-title">3 days left</p>
+    </div>
+    <div class="creater">
+      <img src="/image-avatar.png"><p class="user-text">Creation of<span> Hamna Siddiqui</span></p>
+    </div>
+  </div>
+</body>
+
+</html>
