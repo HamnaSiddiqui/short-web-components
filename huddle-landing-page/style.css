@@ -1,0 +1,151 @@
+body{
+    background-color: hsl(257, 40%, 49%);
+    background-image: url('/images/bg-desktop.svg');
+}
+article{
+    color: white;
+    margin-left: 3em;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2em;
+    font-weight: 900;
+}
+.main{
+    margin-top: 4.5em;
+}
+.main-container{
+    height: 29em;
+    width: 44em;
+    float: left;
+    margin-left: 4em;
+    background-image: url("/images/illustration-mockups.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.sidebar{
+    height: 17em;
+    width: 29.25em;
+    float: right;
+    margin-top: 2em;
+    margin-right: 6em;
+}
+.title{
+    color: white;
+    font-size: 2.5em;
+    font-family: 'Poppins', sans-serif;
+}
+.paragraph{
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-weight: 400;
+}
+#btn{
+    font-family: 'Open Sans', sans-serif;
+    color: hsl(257, 40%, 49%);
+    background-color: white;
+    height: 2.5em;
+    width: 10rem;
+    font-size: 17px;
+    text-align: center;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+footer{
+    margin-top: 32em;
+    margin-left: 65em;
+}
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+li{
+    height: 30px;
+    width: 37px;
+    margin: 0 9px;
+    border-radius: 50px;
+    overflow: hidden;
+    background-color: transparent;
+        box-shadow: 0 12px 12px rgba(0, 0, 0, 0.5);
+    padding-top: 6px;
+    list-style: none;
+    text-align: center;
+}
+li i{
+    font-size: 20px;
+    text-align: center;
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+@media (max-width:500px){
+    body{
+        background-image: url("/images/bg-mobile.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    article{
+        font-size: 30px;
+    }
+    img{
+        background-size: contain;
+        height: 25px;
+        width: 25px;
+    }
+    .main{
+        width: 25em;
+        margin: 2em 3em 0 2.5em;
+        height: 30.5em;
+    }
+    .main-container{
+        width: 17em;
+        height: 13em;
+        background-size: contain;
+    }
+    .sidebar{
+        margin-top: 0;
+        height: 15em;
+        width: 16em;
+        text-align: center;
+    }
+    .title{
+        font-size: 22px;
+        font-family: 'Poppins', sans-serif;
+        line-height: 1.5;
+    }
+    .paragraph{
+        font-size: 15px;
+        font-family: 'Open Sans', sans-serif;
+        line-height: 1.5;
+    }
+    #btn{
+        font-size: 12px;
+        height: 3em;
+        width: 14em;
+    }
+    footer{
+        margin: 1.5em 0.05em;
+        margin-right: 5em;
+    }
+    ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    li{
+        height: 20px;
+        width: 25px;
+        margin: 0 9px;
+        border-radius: 50px;
+        overflow: hidden;
+        background-color: transparent;
+        box-shadow: 0 12px 15px rgba(0, 0, 0, 0.5);
+        padding-top: 2px;
+        list-style: none;
+        text-align: center;
+    }
+    li i{
+        font-size: 15px;
+        text-align: center;
+    }
+}
