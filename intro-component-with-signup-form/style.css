@@ -56,7 +56,7 @@ body{
 
 .form{
     background-color: white;
-    height: 67vh;
+    height: 70vh;
     border-radius: 9px;
     /* flex: 0 0 40%; */
     width: 30em;
@@ -69,15 +69,51 @@ body{
 .input-area{
     margin-top: 2em;
 }
-input{
+.form-control input{
     width: 90%;
     height: 2em;
     border-radius: 5px;
     display: block;
-    margin: 2em auto;
+    margin: 0em auto;
     padding: 1.8em;
     border: 1px solid hsl(249, 10%, 26%);
+    
 }
+
+/*****Sign up basics******/
+
+
+.validate{
+    margin-bottom: 5px;
+    margin-top: 0;
+    padding-left: 12em;
+}
+.form-control small{
+    visibility: hidden;
+}
+.form-control i{
+    visibility: hidden;
+}
+.form-control.success input{
+    border: 2px solid #2ecc71;
+}
+.form-control.error input{
+    border: 2px solid #e74c3c;
+}
+.form-control.success i.fa-check-circle{
+    color: #2ecc71;
+    visibility: visible;
+}
+.form-control.error i.fa-exclamation-circle{
+    color: #e74c3c;
+    visibility: visible;
+}
+.form-control.error small{
+    color: #e74c3c;
+    visibility: visible;
+}
+
+
 button{
     width: 90%;
     text-transform: uppercase;
@@ -92,6 +128,7 @@ button{
     color: white;
     display: block;
     border-radius: 5px;
+    cursor: pointer;
 }
 .terms{
     margin-top: 0.5em;
@@ -110,13 +147,16 @@ a{
 @media(max-width: 1280px) {
     .form{
         width: 23em;
-        height: 67vh;
+        height: 70vh;
     }
     .head{
         width: 23em;
     }
     .text-area{
         width: 20em;
+    }
+    .validate{
+        padding-left: 8em;
     }
 }
 
@@ -161,6 +201,7 @@ a{
         display: block;
         margin: 2em auto;
         width: 25em;
+        height: 30em;
     }
 }
 @media (max-width: 600px) {
@@ -176,5 +217,8 @@ a{
     }
     .form{
         width: 20em;
+    }
+    .validate{
+        padding-left: 9em;
     }
 }
