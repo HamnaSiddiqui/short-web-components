@@ -1,44 +1,26 @@
-const form = document.getElementById('form');
-const firstname = document.getElementById('firstname');
-const lastname = document.getElementById('lastname');
-const email = document.getElementById('email');
-const password = document.getElementById('password');
+const form = document.querySelector('.form-container form');
+const inputs = document.querySelectorAll('.form-container input');
 
 form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  
-  checkInputs();
-})
+	e.preventDefault();
+	inputs.forEach((input) => {
+		// console.log(input.value);
+		if (!input.value) {
+			input.parentElement.classList.add('error');
+		} else {
+			input.parentElement.classList.remove('error');
+			if (input.type == 'email') {
+				if (validateEmail(input.value)) {
+					input.parentElement.classList.remove('error');
+				} else {
+					input.parentElement.classList.add('error');
+				}
+			}
+		}
+	});
+});
 
-function checkInputs(){
-  
-  const fnameValue = firstname.value.trim();
-  const lnameValue = lastname.value.trim();
-  const emailValue = email.value.trim();
-  const passwdValue = password.value.trim();
-  
-  
-  if(fnameValue === ''){
-    setErrorFor(firstname, 'name cannot be blanked');
-  }
-  else{
-    setSuccessFor(firstname);
-  }
-}
-
-function setErrorFor(inp, msg){
-  const formcontrol = inp.parentElement;
-  const exclamation = formcontrol.querySelector('.fa-check-circle');
-  const small = formcontrol.querySelector('small');
-  
-  small.innerText = msg;
-  
-  formcontrol.className = 'form-control error';
-  
-  exclamation.style.visibility = 'visible';
-}
-
-function setSuccessFor(inp){
-  const formcontrol = inp.parentElement;
-  formcontrol.className = 'form-control success';
+function validateEmail (email) {
+	var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	return re.test(String(email).toLowerCase());
 }
